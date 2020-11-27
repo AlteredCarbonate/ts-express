@@ -1,0 +1,21 @@
+{
+   "name": "ts-express",
+   "version": "1.0.0",
+   "description": "",
+   "main": "build/index.js",
+   "dependencies": {
+      "@types/express": "^4.17.9",
+      "express": "^4.17.1",
+      "nodemon": "^2.0.6",
+      "prettier": "^2.2.0",
+      "typescript": "^4.1.2"
+   },
+   "devDependencies": {},
+   "scripts": {
+      "tsc:build": "tsc",
+      "tsc:watch": "tsc -w",
+      "run": "nodemon ./build/index.js"
+   },
+   "author": "Ramon Pawlowski",
+   "license": "ISC"
+}
