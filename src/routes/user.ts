@@ -1,11 +1,11 @@
 import * as express from "express";
-import { HandlerCodes } from "./enums/HandlerCodes";
+import { HTTP } from "./enums/HTTP";
 
 export const user = express.Router();
 
 user.get("/", (req, res): void => {
-   res.status(HandlerCodes.ACCEPTED).send({
-      top: "SUCCESS",
-      bottom: "HandlerCode Accepted",
+   res.setHeader("type", "success");
+   res.status(HTTP.ACCEPTED).send({
+      message: "HandlerCode accepted",
    });
 });
