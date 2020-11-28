@@ -13,6 +13,7 @@ app.use(
       extended: true,
    })
 );
+
 const port: number = 3000;
 app.listen(port, () => {
    console.log(`[EXPRESS] Listening on http://localhost:${port}`);
