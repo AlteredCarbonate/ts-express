@@ -1,6 +1,11 @@
-import { GraphQLID, GraphQLList, GraphQLObjectType } from "graphql";
-import { HeroType } from "./types/HeroType";
+import {
+   GraphQLID,
+   GraphQLList,
+   GraphQLObjectType,
+   GraphQLSchema,
+} from "graphql";
 import { heroes } from "../data/heroes";
+import { HeroType } from "./types";
 
 export const rootQueryType = new GraphQLObjectType({
    name: "Query",
@@ -20,4 +25,8 @@ export const rootQueryType = new GraphQLObjectType({
          },
       },
    }),
+});
+
+export let rootSchema = new GraphQLSchema({
+   query: rootQueryType,
 });

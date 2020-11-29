@@ -2,7 +2,7 @@ import * as express from "express";
 import bodyParser = require("body-parser");
 
 import { graphqlHTTP } from "express-graphql";
-import { rootSchema } from "./graphql/rootSchema";
+import { rootSchema } from "./graphql";
 
 // TODO Rework the API based on GraphQL
 // TODO Split GraphQL in a own .ts
@@ -13,7 +13,7 @@ import { rootSchema } from "./graphql/rootSchema";
 let app = express();
 
 app.use(
-   "/graphql",
+   "/",
    graphqlHTTP({
       schema: rootSchema,
       graphiql: true,
